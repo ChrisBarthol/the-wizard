@@ -1,0 +1,14 @@
+<%= f.fields_for :child, OpenStruct.new(@user.child) do |ff| %>
+  <div class="field">
+    <%= ff.label :first_name %><br />
+    <%= ff.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= ff.label :last_name %><br />
+    <%= ff.text_area :last_name %>
+  </div>
+  <div class="field">
+    <%= ff.label :age, 'Age' %><br />
+    <%= ff.number_field :age %>
+  </div>
+<% end %>
